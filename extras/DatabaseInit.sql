@@ -11,6 +11,7 @@ create table Students(
 create table Buildings(
 				BuildingID int primary key,
 				BuildingName varchar(100) unique not null,
+				BuildingType varchar(20) not null,
 				Latitude int not null, 
 				Longitude int not null
 				);

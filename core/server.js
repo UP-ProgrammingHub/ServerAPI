@@ -8,7 +8,15 @@ http.createServer(function (req, res) {
             
             if(req.url === '/'){
                 console.log("Root or Home")
-            } else if(req.url === ''){
+            } else if(req.url === '/getLibraries'){
+                
+            }else if(req.url === '/getDiningHalls'){
+                
+            }else if(req.url === '/getExamHalls'){
+                
+            }else if(req.url === '/getKuduTerminals'){
+                
+            }else if(req.url === '/getLectureHalls'){
                 
             }
             break
