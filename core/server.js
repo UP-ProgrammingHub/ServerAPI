@@ -5,6 +5,12 @@ settings = require("../settings")
 http.createServer(function (req, res) {
     switch(req.method){
         case "GET":
+            
+            if(req.url === '/'){
+                console.log("Root or Home")
+            } else if(req.url === ''){
+                
+            }
             break
 
         case "POST":
