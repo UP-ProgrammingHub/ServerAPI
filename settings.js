@@ -1,9 +1,12 @@
+var constants = require("./constants")
+
 exports.dbConfig = {
-    user: "Admin",
-    Password: "ADMIN",
-    server: ".",
-    database: "up_app",
-    port: 2000
+  server:"localhost\\MSSQLSERVER",
+  database: "up_app",
+  user: "uplifted",
+  password: "uplifted",
+  port:1433
 }
 
 exports.HTTPport = 2000
+exports.httpResponseFormat = constants.formats.json

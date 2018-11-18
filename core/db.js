@@ -3,20 +3,24 @@ var settings = require("../settings")
 
 exports.exeSQL = function (sqlCommand, callback){
 
-    var connection  = new sqlDB.connection(settings.dbConfig) //connecct using settings
+    var connection  = new sqlDB.ConnectionPool(settings.dbConfig) //connecct using settings
+    var req = new sqlDB.Request(connection) // new request
 
-    connection.connect().then(connectMethod()).catch(conCatchMethod(err)) //connect if not catch error
-
-    connectMethod = function (){
-        var req = new sqlDB.Request(connection) // new request
-        req.query(sqlCommand).then(recSetMethod (recordset)).catch(conCatchMethod(err))
-
-        recSetMethod = function (recordset){
-            callback(recordset)
+    console.log("Command: " + sqlCommand)
+    connection.connect( function (err){
+        if(err){
+            callback(null,err)
+            return
         }
-    }
-    conCatchMethod = function (err){
-        console.log(err)
-        callback(null,err)
-    }
+        
+        req.query(sqlCommand,function (err, data){
+            if(err){
+                callback(null,err)
+            }else{
+                console.log(data.recordset)
+                callback(data.recordset)
+            }
+            connection.close()
+        })
+    })
 }
