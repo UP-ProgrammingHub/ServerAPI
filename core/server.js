@@ -19,13 +19,16 @@ http.createServer(function (req, res) {
                 building.getKuduTerminals(req,res)
             }else if(req.url === '/getLectureHalls'){
                 building.getLectureVenues(req,res)
+            } else if (req.url === '/getPersonalBuildings'){
+                building.getPersonalBuildings(req,res,1043882)
             }
             break
 
         case "POST":
-            if(req === '/addPersonalBuilding'){
-                var reqBody = ''
-                
+            if(req.url === '/addPersonalBuilding'){
+                building.addPersonalBuilding(req,res)
+            } else if (req.url === '/verifyUser'){
+                building.verifyUser(req,res)
             }
             break
 

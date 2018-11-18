@@ -6,7 +6,6 @@ exports.exeSQL = function (sqlCommand, callback){
     var connection  = new sqlDB.ConnectionPool(settings.dbConfig) //connecct using settings
     var req = new sqlDB.Request(connection) // new request
 
-    console.log("Command: " + sqlCommand)
     connection.connect( function (err){
         if(err){
             callback(null,err)
@@ -17,7 +16,6 @@ exports.exeSQL = function (sqlCommand, callback){
             if(err){
                 callback(null,err)
             }else{
-                console.log(data.recordset)
                 callback(data.recordset)
             }
             connection.close()

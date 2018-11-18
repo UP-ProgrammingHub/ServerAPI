@@ -4,13 +4,14 @@ create database up_app;
 
 create table Students(
 				StudentID int primary key, 
+				Password not null,
 				FirstName varchar(20) not null,
 				LastName varchar(20) not null
 				);
-insert into Students values(1043882,'Gift','Langa')
-insert into Students values(1198990,'Kwazi','Thusi')
-insert into Students values(1122367,'Wavhudi','Thitshivhe')
-insert into Students values(1048980,'Mokete','k')
+insert into Students values(1043882, 'auth' ,'Gift','Langa')
+insert into Students values(1198990, 'auth' ,'Kwazi','Thusi')
+insert into Students values(1122367, 'auth' ,'Wavhudi','Thitshivhe')
+insert into Students values(1048980, 'auth' ,'Mokete','k')
 
 
 create table Buildings(
