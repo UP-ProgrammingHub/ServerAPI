@@ -23,6 +23,10 @@ http.createServer(function (req, res) {
             break
 
         case "POST":
+            if(req === '/addPersonalBuilding'){
+                var reqBody = ''
+                
+            }
             break
 
         case "PUT":

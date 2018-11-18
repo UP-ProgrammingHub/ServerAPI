@@ -62,3 +62,30 @@ exports.getDining = function(req,res){
         }
     })
 }
+
+exports.addPersonalBuilding = function(req,res, reqBody){
+    /* reqBody = {
+     *            'StudentID' : 1234567,
+     *            'BuildingID': 123234
+     * }
+     */
+    try{
+        if(reqBody){
+            var data = JSON.parse(reqBody)
+            db.exeSQL("INSERT INTO StudentVenues\
+            VALUES("+reqBody.StudentID + "," + reqBody.BuildingID,
+            function(data,err){
+                if(err){
+                    HTMLresps.error500Occured(req,res,err)
+                } else {
+                    HTMLresps.addSuccessful(req,res)
+                }
+            })
+        } else {
+            throw new Error("Input invalid")
+        }
+
+    } catch(err){
+        HTMLresps.error500Occured(req,res,err)
+    }
+}

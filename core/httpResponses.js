@@ -17,3 +17,8 @@ exports.status200OK = function(req,res,data){
     res.write(JSON.stringify(data))
     res.end()
 }
+
+exports.addSuccessful = function(req,res){
+    res.writeHead(200,"Success", {"Content-Type":"application/json"})
+    res.end()
+}
