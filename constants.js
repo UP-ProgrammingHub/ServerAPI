@@ -6,7 +6,8 @@ exports.BuildingTypes = {
     'kudu': 'Kudu Terminal',
     'Serv': 'Services',
     'Labs': 'Laboratory',
-    'Reses': 'Residence'
+    'Reses': 'Residence',
+    'Shops': 'Shops'
 }
 
 exports.formats = {
