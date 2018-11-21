@@ -3,7 +3,8 @@ exports.BuildingTypes = {
     'Dining': 'Dining Hall',
     'Lecture': 'Lecture Hall',
     'exam': 'Exam Hall',
-    'kudu': 'Kudu Terminal'
+    'kudu': 'Kudu Terminal',
+    'Serv': 'Services'
 }
 
 exports.formats = {
