@@ -1,10 +1,10 @@
 var constants = require("./constants")
 
 exports.dbConfig = {
-  server:"localhost\\MSSQLSERVER",
+  server:"localhost\\MSSQLSERVER", // upappserver
   database: "up_app",
   user: "uplifted",
-  password: "uplifted",
+  password: "uplifted", //UP_lifted
   port:1433
 }
 

@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "9115cfd6-f442-4f2b-960f-8c925ea414e4",
+		"name": "UP_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get lecture halls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/getLectureHalls",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"getLectureHalls"
+					]
+				},
+				"description": "returns the building names of available lecture halls"
+			},
+			"response": []
+		},
+		{
+			"name": "get Kudu Terminals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/getKuduTerminals",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"getKuduTerminals"
+					]
+				},
+				"description": "fetches kudu terminals"
+			},
+			"response": []
+		},
+		{
+			"name": "get Exam Halls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/getExamHalls",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"getExamHalls"
+					]
+				},
+				"description": "fecthes exam halls"
+			},
+			"response": []
+		},
+		{
+			"name": "get Dining Halls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/getDiningHalls",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"getDiningHalls"
+					]
+				},
+				"description": "fetches dining halls"
+			},
+			"response": []
+		},
+		{
+			"name": "get Libraries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/getLibraries",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"getLibraries"
+					]
+				},
+				"description": "fetches libraries"
+			},
+			"response": []
+		},
+		{
+			"name": "add Personal Building",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"StudentID\": 1043882,\n\t\"BuildingID\": 1\n\t}"
+				},
+				"url": {
+					"raw": "localhost:2000/addPersonalBuilding",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"addPersonalBuilding"
+					]
+				},
+				"description": "allows user to add prefered buildings in options"
+			},
+			"response": []
+		},
+		{
+			"name": "get Personal Buildings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/getPersonalBuildings",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"getPersonalBuildings"
+					]
+				},
+				"description": "fetches personal buildings"
+			},
+			"response": []
+		},
+		{
+			"name": "verify User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"StudentID\": 1043882,\n\t\"Password\" :\"auth\"\n\t}"
+				},
+				"url": {
+					"raw": "localhost:2000/verifyUser",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"verifyUser"
+					]
+				},
+				"description": "used to verify a user when signing in"
+			},
+			"response": []
+		}
+	]
+}
