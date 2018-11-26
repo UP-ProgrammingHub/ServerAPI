@@ -63,7 +63,7 @@ exports.getDining = function(req,res){
     })
 }
 
-exports.getPersonalBuildings = function(req,res,studentID){
+exports.getFavoriteBuildings = function(req,res,studentID){
     db.exeSQL("SELECT StudentVenues.StudentID, Buildings.* FROM Buildings\
     INNER JOIN StudentVenues ON StudentVenues.BuildingID = Buildings.BuildingID\
     WHERE StudentVenues.StudentID = " + studentID, function(data, err){
@@ -75,7 +75,7 @@ exports.getPersonalBuildings = function(req,res,studentID){
     })
 }
 
-exports.addPersonalBuilding = function(req,res){
+exports.addFavoriteBuilding = function(req,res){
     /* req.body = {
      *            "StudentID" : 1234567,
      *            "BuildingID": 123234
@@ -141,4 +141,20 @@ exports.verifyUser = function(req,res){
             HTMLresps.error500Occured(req,res,err)
         }
     })
+}
+
+exports.getShops = function(req,res){
+
+}
+
+exports.getServices = function(req,res){
+
+}
+
+exports.getLaboratories = function(req,res){
+
+}
+
+exports.getResidences = function(req,res){
+    
 }

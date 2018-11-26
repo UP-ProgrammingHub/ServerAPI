@@ -1,16 +1,16 @@
 exports.BuildingTypes = {
-    'Lib': 'Library',
-    'Dining': 'Dining Hall',
-    'Lecture': 'Lecture Hall',
-    'exam': 'Exam Hall',
-    'kudu': 'Kudu Terminal',
-    'Serv': 'Services',
-    'Labs': 'Laboratory',
-    'Reses': 'Residence',
-    'Shops': 'Shops'
+    'Lib': 'Library', //implemented
+    'Dining': 'Dining Hall', //implemented
+    'Lecture': 'Lecture', //implemented
+    'exam': 'Exam Hall', //implemented
+    'kudu': 'Kudu Terminal', //implemented
+    'Serv': 'Services', //partial
+    'Labs': 'Laboratory', //partial
+    'Reses': 'Residence', //partial
+    'Shops': 'Shops' //partial
 }
 
-exports.formats = {
+exports.formats = { //used to specify the type of data
     'html': "HTML",
     'json': "JSON"
 }
